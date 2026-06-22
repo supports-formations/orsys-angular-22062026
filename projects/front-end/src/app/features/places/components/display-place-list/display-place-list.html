@@ -1,2 +1,24 @@
-<h1>{{ title }}</h1>
-<h2>{{ subTitle }}</h2>
+<button (click)="change()">Change</button>
+
+
+<h1 style="text-transform: uppercase;">{{ title }}</h1>
+<!-- <h2>{{ PAS BIEN / toUpperCase(subTitle) }} - {{ places.length }} lieu(s) disponible(s)</h2> -->
+
+<h2>{{ subTitle | toUpperCase | lowercase }}</h2>
+
+
+@for (item of places; track item) {
+    <div>{{ item }}</div>
+}
+@empty {
+    <i>Aucun lieu disponible</i>   
+}
+
+<button (click)="addPlace()">[+]</button>
+
+@if(places.length > 0) {
+    <button (click)="removePlace()">[-]</button>
+}
+@else {
+   <i>Aucun lieu à supprimer</i> 
+}
