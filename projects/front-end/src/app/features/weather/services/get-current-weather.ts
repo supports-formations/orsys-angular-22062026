@@ -3,7 +3,7 @@ import { inject, Service } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Weather } from '../models/weather';
 import { map } from 'rxjs/internal/operators/map';
-import { interval, switchMap, tap } from 'rxjs';
+import { switchMap, timer } from 'rxjs';
 
 export type WeatherFromApi = {
     current: {
@@ -17,7 +17,7 @@ export type WeatherFromApi = {
 @Service()
 export class GetCurrentWeather {
     private readonly httpClient = inject(HttpClient);
-    private readonly refresh$ = interval(10000);
+    private readonly refresh$ = timer(0, 10000);
 
     getOne(latitude: number, longitude: number): Observable<Weather> {
         const url = this.getApiUrl(latitude, longitude);
@@ -30,7 +30,7 @@ export class GetCurrentWeather {
             }))
         );
 
-        return this.refresh$.pipe(
+        return  this.refresh$.pipe(
             //tap((counter) => console.log('Refreshing weather data...', counter)),
             switchMap(() => weatherRequest$)
         );
