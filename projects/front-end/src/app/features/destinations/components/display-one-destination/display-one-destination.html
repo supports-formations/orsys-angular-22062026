@@ -5,7 +5,7 @@
         @for (step of destination.steps; track step.id) {
         <!-- <li *ngFor="let step of destination.steps"> -->
         <li>
-            {{ step | stepToString }}
+            {{ step | stepToString | uppercase }}
         </li>
         }
     </ul>
