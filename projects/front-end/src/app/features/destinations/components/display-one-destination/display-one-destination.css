@@ -1,0 +1,107 @@
+:host {
+	--sky-100: #eef8ff;
+	--sky-300: #b7e4ff;
+	--pine-700: #1f5c4a;
+	--pine-800: #174739;
+	--sun-300: #ffe38a;
+	--sun-500: #f7c75f;
+	--stone-100: #f7f7f3;
+	--stone-400: #d9d9cf;
+	--ink-900: #20332f;
+
+	display: block;
+	position: relative;
+	padding: 1.3rem 1.3rem 1rem;
+	border-radius: 20px;
+	border: 1px solid color-mix(in srgb, var(--pine-700) 16%, white);
+	color: var(--ink-900);
+	background:
+		radial-gradient(140% 80% at 90% -20%, color-mix(in srgb, var(--sun-300) 78%, white) 0%, transparent 58%),
+		linear-gradient(180deg, var(--sky-100) 0%, #f9fff8 55%, var(--stone-100) 100%);
+	box-shadow:
+		0 14px 30px -20px color-mix(in srgb, var(--pine-700) 50%, transparent),
+		inset 0 1px 0 color-mix(in srgb, white 70%, var(--sun-300));
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	overflow: hidden;
+}
+
+:host::before,
+:host::after {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+}
+
+:host::before {
+	left: -8%;
+	right: -8%;
+	bottom: -34px;
+	height: 125px;
+	background:
+		linear-gradient(120deg, #85b88e 0 35%, transparent 35%),
+		linear-gradient(60deg, #5d8f68 0 38%, transparent 38%),
+		linear-gradient(140deg, #426c52 0 42%, transparent 42%);
+	opacity: 0.82;
+}
+
+:host::after {
+	top: 14px;
+	right: 16px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 30% 35%, #fff6d0 0 18%, var(--sun-500) 55%, #e39f2f 100%);
+	box-shadow: 0 0 0 9px color-mix(in srgb, var(--sun-300) 26%, transparent);
+}
+
+ul {
+	margin: 0.9rem 0 0;
+	padding: 0.95rem 0.95rem 0.95rem 1.2rem;
+	list-style: none;
+	border-radius: 14px;
+	background: color-mix(in srgb, white 80%, var(--sky-300));
+	border: 1px solid color-mix(in srgb, var(--stone-400) 65%, white);
+	backdrop-filter: blur(2px);
+}
+
+li {
+	position: relative;
+	margin: 0;
+	padding: 0.45rem 0.1rem 0.45rem 1.35rem;
+	line-height: 1.45;
+	color: color-mix(in srgb, var(--ink-900) 88%, black);
+	font-size: 0.98rem;
+}
+
+li + li {
+	border-top: 1px dashed color-mix(in srgb, var(--pine-700) 22%, white);
+}
+
+li::before {
+	content: "";
+	position: absolute;
+	top: 0.92rem;
+	left: 0.3rem;
+	width: 0.58rem;
+	height: 0.58rem;
+	border-radius: 2px 50% 50% 50%;
+	transform: rotate(-42deg);
+	background: linear-gradient(155deg, #66a963 0%, #2f7e56 100%);
+	box-shadow: 0 1px 0 color-mix(in srgb, white 65%, transparent);
+}
+
+@media (max-width: 640px) {
+	:host {
+		padding: 1rem 0.95rem 0.9rem;
+		border-radius: 16px;
+	}
+
+	ul {
+		padding: 0.82rem 0.8rem 0.82rem 1rem;
+	}
+
+	li {
+		padding-left: 1.2rem;
+		font-size: 0.94rem;
+	}
+}
