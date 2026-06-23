@@ -1,5 +1,9 @@
 @let places = places$ | async;
 
+@if(! places) {
+    <i> Chargement en cours...</i>
+}
+
 <button (click)="change()">Change</button>
 
 
@@ -10,7 +14,7 @@
 
 
 @for (item of places; track item) {
-    <div>{{ item }}</div>
+    <div>{{ item.label }}</div>
 }
 @empty {
     <i>Aucun lieu disponible</i>   
