@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { DisplayPlaceList } from './features/places/components/display-place-list/display-place-list';
 import { DisplayOneDestination } from './features/destinations/components/display-one-destination/display-one-destination';
+import { DisplayCurrentWeather } from './features/weather/components/display-current-weather/display-current-weather';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DisplayPlaceList, DisplayOneDestination],
+  imports: [DisplayPlaceList, DisplayOneDestination, DisplayCurrentWeather],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

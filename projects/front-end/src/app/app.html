@@ -1,4 +1,23 @@
-<h1>Mes vacances</h1>
-<orsys-display-place-list />
+<main class="summer-mountain-app">
+	<header class="hero">
+		<p class="hero-kicker">Ete 2026</p>
+		<h1>Vacances d'ete au bord de la montagne</h1>
+		<p class="hero-subtitle">
+			Entre lacs frais, sentiers ensoleilles et villages perchés.
+		</p>
+	</header>
 
-<!-- <orsys-display-one-destination /> -->
+	<section class="app-section weather-section" aria-label="Meteo actuelle">
+		<h2>Meteo de la station</h2>
+		<orsys-display-current-weather />
+	</section>
+
+	<section class="app-section" aria-label="Lieux a visiter">
+		<orsys-display-place-list />
+	</section>
+
+	<section class="app-section destination-section" aria-label="Etapes du voyage">
+		<h2>Itineraire de randonnee</h2>
+		<orsys-display-one-destination />
+	</section>
+</main>

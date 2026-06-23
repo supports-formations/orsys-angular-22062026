@@ -1,11 +1,11 @@
-import { AsyncPipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
+import { AsyncPipe, LowerCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ToUpperCasePipe } from '../../../../shared/ui/pipes/to-upper-case-pipe';
 import { GetListPlaces } from '../../services/get-list-places';
 
 @Component({
   selector: 'orsys-display-place-list',
-  imports: [ToUpperCasePipe, UpperCasePipe, LowerCasePipe, AsyncPipe],
+  imports: [ToUpperCasePipe, LowerCasePipe, AsyncPipe],
   templateUrl: './display-place-list.html',
   styleUrl: './display-place-list.css',
 })

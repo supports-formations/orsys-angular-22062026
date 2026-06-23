@@ -1,0 +1,55 @@
+.weather-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.9rem;
+	padding: 0.95rem 1rem;
+	border-radius: 16px;
+	border: 1px solid color-mix(in srgb, #2a5c4f 18%, white);
+	background:
+		radial-gradient(90% 115% at 95% 0%, color-mix(in srgb, #ffd486 45%, white), transparent 52%),
+		color-mix(in srgb, white 78%, #d4eeff);
+}
+
+.weather-label {
+	margin: 0;
+	font-size: 0.78rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: color-mix(in srgb, #1f5c4a 70%, black);
+}
+
+.weather-info {
+	display: grid;
+	gap: 0.28rem;
+}
+
+.temperature {
+	font-size: clamp(1.5rem, 3.5vw, 2rem);
+	font-weight: 700;
+	line-height: 1;
+	color: #174739;
+}
+
+.wind {
+	font-size: 0.95rem;
+	color: color-mix(in srgb, #174739 84%, black);
+}
+
+.weather-icon {
+	width: 78px;
+	height: 78px;
+	object-fit: contain;
+	filter: drop-shadow(0 10px 14px color-mix(in srgb, #2a5c4f 28%, transparent));
+}
+
+@media (max-width: 560px) {
+	.weather-container {
+		padding: 0.8rem;
+	}
+
+	.weather-icon {
+		width: 60px;
+		height: 60px;
+	}
+}

@@ -1,3 +1,98 @@
-h1 {
-    color:burlywood;
+:host {
+    display: block;
+    min-height: 100dvh;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.summer-mountain-app {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.1rem;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border-radius: 24px;
+    border: 1px solid color-mix(in srgb, #1f5c4a 20%, white);
+    color: #173d34;
+    background:
+        radial-gradient(120% 95% at 100% -10%, color-mix(in srgb, #ffd486 85%, white) 0%, transparent 58%),
+        linear-gradient(155deg, color-mix(in srgb, #9ed9ff 55%, white) 0%, #f7fff5 52%, #f2ffe4 100%);
+    box-shadow: 0 24px 38px -28px color-mix(in srgb, #1f5c4a 45%, transparent);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    bottom: -36px;
+    height: 120px;
+    pointer-events: none;
+    background:
+        linear-gradient(120deg, #84bc8c 0 35%, transparent 35%),
+        linear-gradient(60deg, #5f966d 0 38%, transparent 38%),
+        linear-gradient(145deg, #3f6f52 0 45%, transparent 45%);
+    opacity: 0.75;
+}
+
+.hero-kicker {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, #1f5c4a 70%, black);
+}
+
+.hero h1 {
+    margin: 0.45rem 0 0.35rem;
+    max-width: 18ch;
+    font-size: clamp(1.6rem, 4.8vw, 2.9rem);
+    line-height: 1.08;
+}
+
+.hero-subtitle {
+    margin: 0;
+    max-width: 46ch;
+    font-size: clamp(0.95rem, 2vw, 1.08rem);
+}
+
+.app-section {
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px solid color-mix(in srgb, #1f5c4a 16%, white);
+    background: color-mix(in srgb, white 84%, #e9fbff);
+    box-shadow: 0 16px 30px -30px color-mix(in srgb, #1f5c4a 55%, transparent);
+}
+
+.app-section h2 {
+    margin: 0 0 0.75rem;
+    color: #1d4a3f;
+    font-size: 1.15rem;
+}
+
+.weather-section {
+    background:
+        radial-gradient(110% 120% at 95% 5%, color-mix(in srgb, #ffd486 38%, white) 0%, transparent 52%),
+        color-mix(in srgb, white 80%, #d7f0ff);
+}
+
+.destination-section {
+    background:
+        radial-gradient(110% 120% at 98% 0%, color-mix(in srgb, #ffe39c 36%, white) 0%, transparent 56%),
+        color-mix(in srgb, white 81%, #e7fff2);
+}
+
+@media (max-width: 680px) {
+    :host {
+        padding: 0.65rem;
+    }
+
+    .app-section {
+        padding: 0.85rem;
+        border-radius: 14px;
+    }
 }

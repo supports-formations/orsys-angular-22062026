@@ -1,0 +1,14 @@
+@let weather = weather$ | async;
+
+@if(weather) {
+  <div class="weather-container">
+    <p class="weather-label">Conditions en ce moment</p>
+    <div class="weather-info">
+      <div class="temperature">{{ weather.temperature }}°C</div>
+      <div class="wind">Vent: {{ weather.wind }} km/h</div>
+    </div>
+    @if(weather.imageUrl) {
+        <img [src]="weather.imageUrl" alt="Weather Icon" class="weather-icon" />
+    }
+  </div>
+}
