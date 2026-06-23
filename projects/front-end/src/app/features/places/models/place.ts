@@ -8,6 +8,7 @@
 export interface Place {
     id: number;
     label: string;
+    imageUrl?: string;
 }
 
 export const defaultPlace: Place = {

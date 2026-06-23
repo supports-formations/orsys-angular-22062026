@@ -9,7 +9,8 @@
     },
     {
         "id": 3,
-        "label": "Great Wall of China"
+        "label": "Great Wall of China",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Great_Hall.jpg/960px-Great_Hall.jpg"
     },
     {
         "id": 4,
