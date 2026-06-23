@@ -1,3 +1,5 @@
+@let places = places$ | async;
+
 <button (click)="change()">Change</button>
 
 
@@ -16,7 +18,7 @@
 
 <button (click)="addPlace()">[+]</button>
 
-@if(places.length > 0) {
+@if(places && places.length > 0) {
     <button (click)="removePlace()">[-]</button>
 }
 @else {

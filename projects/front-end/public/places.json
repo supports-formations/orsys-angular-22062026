@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "label": "Eiffel Tower"
+    },
+    {
+        "id": 2,
+        "label": "Statue of Liberty"
+    },
+    {
+        "id": 3,
+        "label": "Great Wall of China"
+    },
+    {
+        "id": 4,
+        "label": "Taj Mahal"
+    },
+    {
+        "id": 5,
+        "label": "Sydney Opera House"
+    }
+]

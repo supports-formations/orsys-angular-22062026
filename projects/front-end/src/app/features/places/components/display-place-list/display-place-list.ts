@@ -1,16 +1,20 @@
-import { LowerCasePipe, UpperCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { AsyncPipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { ToUpperCasePipe } from '../../../../shared/ui/pipes/to-upper-case-pipe';
+import { GetListPlaces } from '../../services/get-list-places';
 
 @Component({
   selector: 'orsys-display-place-list',
-  imports: [ToUpperCasePipe, UpperCasePipe, LowerCasePipe],
+  imports: [ToUpperCasePipe, UpperCasePipe, LowerCasePipe, AsyncPipe],
   templateUrl: './display-place-list.html',
   styleUrl: './display-place-list.css',
 })
 export class DisplayPlaceList {
   protected title = 'Liste des lieux';
   protected readonly subTitle = 'Découvrez les lieux à visiter';
+
+  private readonly service = inject(GetListPlaces);
+  protected readonly places$ = this.service.getList(); // Aucune requête n'est faite tant que l'observable n'est pas souscrit
 
   // Pyrénées
   protected readonly places = ['Lac de Gaubes', 'Pont d\'espagne'];
