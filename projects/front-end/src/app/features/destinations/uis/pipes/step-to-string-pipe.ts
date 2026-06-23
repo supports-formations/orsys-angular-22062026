@@ -3,7 +3,7 @@ import { Step } from '../../models';
 
 @Pipe({
   name: 'stepToString',
-  //pure: true
+  pure: true
 })
 export class StepToStringPipe implements PipeTransform {
   transform(value: Step, ...args: unknown[]): string | null {
