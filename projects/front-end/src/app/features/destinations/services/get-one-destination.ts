@@ -15,7 +15,7 @@ export class GetOneDestination {
                     id: 1,
                     date: new Date(),
                     nbKms: 100,
-                    place: { id: 1, label: 'Place 1' }
+                    place: [{ id: 1, label: 'Place 1' }]
                 },
                 {
                     id: 2,

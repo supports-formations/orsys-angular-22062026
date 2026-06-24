@@ -2,7 +2,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'notationToStars',
-  standalone: true,
 })
 export class NotationToStarsPipe implements PipeTransform {
   transform(value: number | null | undefined): string {

@@ -6,6 +6,10 @@
         <!-- <li *ngFor="let step of destination.steps"> -->
         <li>
             {{ step | stepToString | uppercase }}
+
+            @for (place of step.place; track place.id) {
+                <orsys-display-culinary-stop-list />
+            }
         </li>
         }
     </ul>

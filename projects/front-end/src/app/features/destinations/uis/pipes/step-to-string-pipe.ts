@@ -13,8 +13,6 @@ export class StepToStringPipe implements PipeTransform {
       result = `Le ${value.date.toLocaleDateString()} : ${value.nbKms} km`;
       if (Array.isArray(value.place)) {
         result += `, ${value.place.map((p) => p.label).join(', ')}`;
-      } else {
-        result += `, ${value.place.label}`;
       }
     }
     

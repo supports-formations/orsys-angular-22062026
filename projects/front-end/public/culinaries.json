@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "label": "Vegan Delight",
+        "imageUrl": "https://example.com/vegan-delight.jpg",
+        "notation": 3.0,
+        "foodType": "vegetarian"
+    },
+    {
+        "id": 2,
+        "label": "Gluten-Free Haven",
+        "imageUrl": "https://example.com/gluten-free-haven.jpg",
+        "notation": 4.0,
+        "foodType": "gluten-free"
+    },
+    {
+        "id": 3,
+        "label": "Halal Bites",
+        "imageUrl": "https://example.com/halal-bites.jpg",
+        "notation": 4.2,
+        "foodType": "halal"
+    },
+    {
+        "id": 4,
+        "label": "Kosher Kitchen",
+        "imageUrl": "https://example.com/kosher-kitchen.jpg",
+        "notation": 4.8,
+        "foodType": "kosher"
+    },
+    {
+        "id": 5,
+        "label": "Pescatarian Paradise",
+        "imageUrl": "https://example.com/pescatarian-paradise.jpg",
+        "notation": 4.3,
+        "foodType": "pescatarian"
+    },
+    {
+        "id": 6,
+        "label": "Omnivore's Feast",
+        "imageUrl": "https://example.com/omnivores-feast.jpg",
+        "notation": 4.6,
+        "foodType": "omnivore"
+    }
+]
