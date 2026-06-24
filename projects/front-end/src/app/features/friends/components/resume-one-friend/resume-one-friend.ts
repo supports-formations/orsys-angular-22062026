@@ -13,6 +13,10 @@ export class ResumeOneFriend {
 
   itemToSave = output<Friend>();
 
+  ngOnInit(): void {
+    console.log('ResumeOneFriend initialized with item:', this.item());
+  }
+  
   save(): void {
     this.itemToSave.emit(this.item());
   }
