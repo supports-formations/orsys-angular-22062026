@@ -1,0 +1,25 @@
+@let friends = listFriends();
+
+<section class="friends-section">
+    <header class="friends-header">
+        <h2>Mes amis rencontres lors de mes voyages</h2>
+        <p>{{ friends.length }} ami(s) affiche(s)</p>
+    </header>
+
+    @if (friends.length === 0) {
+        <p class="empty-state">Aucun ami a afficher pour le moment.</p>
+    } 
+    @else {
+        <div class="friends-grid">
+            @for (friend of friends; track friend.id) {
+                <article class="friend-card">
+                    <img [src]="friend.pictureUrl" [alt]="friend.name" class="friend-picture" />
+                    <div class="friend-info">
+                        <h3>{{ friend.name }}</h3>
+                        <p>{{ friend.email }}</p>
+                    </div>
+                </article>
+            }
+        </div>
+    }
+</section>
