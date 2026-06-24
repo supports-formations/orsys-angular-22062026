@@ -26,7 +26,7 @@ export class DisplayFriends {
     return this.listFriends().filter((friend) => friend.age && friend.age >= filterValue);
   });
 
-  protected readonly listFriendsLength = computed(() => this.listFriends().length);
+  protected readonly listFriendsLength = computed(() => this.filteredFriends().length);
 
   // protected readonly friendsMoreThanXyears = (age: number) => computed(() => {
   //   return this.listFriends().filter((friend) => friend.age && friend.age >= age);
