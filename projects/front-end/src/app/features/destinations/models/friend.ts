@@ -3,6 +3,7 @@ export interface Friend {
   name: string;
   email: string;
   pictureUrl ?: string;
+  age ?: number;
 }
 
 interface BestFriend extends Friend {
