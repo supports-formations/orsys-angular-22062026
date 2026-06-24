@@ -1,0 +1,26 @@
+@let items = culinaryStops();
+
+<section class="culinary-section">
+    <header class="culinary-header">
+        <h3>Arrets gustatifs</h3>
+        <p>Un carnet gourmand de {{ items.length }} etape(s) a savourer</p>
+    </header>
+
+    @if (items.length === 0) {
+        <p class="empty-state">Aucun arret culinaire disponible pour le moment.</p>
+    } @else {
+        <div class="culinary-grid">
+            @for (item of items; track item.id) {
+                <article class="culinary-card">
+                    <div class="card-head">
+                        <h4>{{ item.label }}</h4>
+                        <span class="rating-pill">{{ item.notation }}</span>
+                    </div>
+
+                    <p class="food-type">Cuisine <span>{{ item.foodType }}</span></p>
+                </article>
+            }
+        </div>
+    }
+</section>
+
