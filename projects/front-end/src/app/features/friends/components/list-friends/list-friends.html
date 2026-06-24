@@ -1,0 +1,9 @@
+@let items = friends();
+
+<h1>Gestion de mes amis</h1>
+
+<div class="friend-grid">
+    @for (friend of items; track friend.id) {
+        <orsys-resume-one-friend [item]="friend" title="Friend" (itemToSave)="saveToApi($event)"></orsys-resume-one-friend>
+    }
+</div>
