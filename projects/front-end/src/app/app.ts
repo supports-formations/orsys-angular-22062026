@@ -1,16 +1,11 @@
 import { Component, computed, OnInit, signal } from '@angular/core';
-import { DisplayPlaceList } from './features/places/components/display-place-list/display-place-list';
-import { DisplayOneDestination } from './features/destinations/components/display-one-destination/display-one-destination';
-import { DisplayCurrentWeather } from './features/weather/components/display-current-weather/display-current-weather';
-import { ObsDiscover } from './features/learnings/obs-discover/obs-discover';
-import { ListFriends } from './features/friends/components/list-friends/list-friends';
-import { CreateOneUser } from './features/users/components/create-one-user/create-one-user';
-import { DisplayUsers } from './features/users/components/display-users/display-users';
 import { RouterOutlet } from '@angular/router';
+import { DisplayCurrentWeather } from './features/weather/components/display-current-weather/display-current-weather';
+import { MainMenu } from './shared/ui/menus/components/main-menu/main-menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ListFriends, DisplayPlaceList, DisplayOneDestination, DisplayCurrentWeather, ObsDiscover, DisplayUsers, CreateOneUser],
+  imports: [RouterOutlet, DisplayCurrentWeather, MainMenu],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
