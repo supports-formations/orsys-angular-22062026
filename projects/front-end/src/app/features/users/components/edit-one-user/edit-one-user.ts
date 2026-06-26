@@ -22,7 +22,9 @@ export class EditOneUser implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['user'] && this.user()) {
+    if (changes['user']) {
+      const user = changes['user'].currentValue as User;
+
       this.form.patchValue({
         firstName: this.user().firstName,
         lastName: this.user().lastName,
