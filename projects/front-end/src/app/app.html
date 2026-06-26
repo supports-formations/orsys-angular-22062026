@@ -1,13 +1,3 @@
-<!-- <button (click)="togleAlive()">Toggle alive</button>
-@if(alive) {
-    <orsys-obs-discover></orsys-obs-discover>
-} -->
-
-<orsys-display-users />
-<orsys-create-one-user />
-
-<h1>{{ title() }}</h1>
-<h1>{{ titleAsMaj() }}</h1>
 
 <main class="summer-mountain-app">
 	<header class="hero">
@@ -23,7 +13,11 @@
 		<orsys-display-current-weather />
 	</section>
 
-	<section class="app-section friends-section" aria-label="Amis">
+	<section class="app-section" >
+		<router-outlet />
+	</section>
+
+	<!-- <section class="app-section friends-section" aria-label="Amis">
 		<h2>Liste des amis</h2>
 		<orsys-list-friends />
 	</section>
@@ -35,5 +29,5 @@
 	<section class="app-section destination-section" aria-label="Etapes du voyage">
 		<h2>Itineraire de randonnee</h2>
 		<orsys-display-one-destination />
-	</section>
+	</section> -->
 </main>
