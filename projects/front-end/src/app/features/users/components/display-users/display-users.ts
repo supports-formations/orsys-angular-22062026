@@ -10,7 +10,11 @@ import { EditOneUser } from '../edit-one-user/edit-one-user';
   styleUrl: './display-users.css',
 })
 export class DisplayUsers {
-  protected readonly users = signal<User[]>([]); // Lecture seule
+  protected readonly users = signal<User[]>([
+    { id: 1, firstName: 'John', lastName: 'Doe' },
+    { id: 2, firstName: 'Jane', lastName: 'Smith' },
+    { id: 3, firstName: 'Alice', lastName: 'Johnson' },
+  ]); // Lecture seule
   protected readonly toEditUser = signal<User | null>(null); 
 
   editOne(user: User): void {
