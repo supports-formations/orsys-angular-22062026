@@ -1,7 +1,41 @@
 @let item = user();
 
-<form >
-    <input type="text" name="firstName" value="{{item.firstName}}" />
+<div class="form-container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Modifier l'utilisateur</h3>
+        </div>
+        
+        <form class="card-body" (ngSubmit)="save()">
+            <div class="form-group">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input 
+                    id="firstName"
+                    type="text" 
+                    class="form-input" 
+                    name="firstName" 
+                    [value]="item.firstName"
+                    placeholder="Entrez le prénom"
+                />
+            </div>
 
-    <button type="submit" (click)="save()">Valider</button>
-</form>
+            <div class="form-group">
+                <label for="lastName" class="form-label">Nom</label>
+                <input 
+                    id="lastName"
+                    type="text" 
+                    class="form-input" 
+                    name="lastName" 
+                    [value]="item.lastName"
+                    placeholder="Entrez le nom"
+                />
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    💾 Enregistrer
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

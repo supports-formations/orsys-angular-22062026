@@ -1,11 +1,34 @@
-@let list = users();
+<div class="users-container">
+    <div class="users-list-section">
+        <div class="section-header">
+            <h2>Liste des utilisateurs</h2>
+            <span class="users-count">{{ users().length }} utilisateur(s)</span>
+        </div>
+        
+        @let list = users();
+        @if (list.length > 0) {
+            <div class="users-grid">
+                @for (item of list; track item.id) {
+                    <div class="user-card-wrapper">
+                        <orsys-display-one-user [user]="item" title="Résumé utilisateur" (editOne)="editOne($event)" />
+                    </div>
+                }
+            </div>
+        } @else {
+            <div class="empty-state">
+                <div class="empty-state-icon">👤</div>
+                <p>Aucun utilisateur enregistré</p>
+                <p class="empty-state-hint">Créez votre premier utilisateur pour le voir apparaître ici</p>
+            </div>
+        }
+    </div>
 
-@for (item of list; track item.id) {
-    <orsys-display-one-user [user]="item" title="Résumé utilisateur" (editOne)="editOne($event)" />
-}
-
-
-@let edituser = toEditUser();
-@if(edituser) {
-    <orsys-edit-one-user [user]="edituser" />
-}
+    @let edituser = toEditUser();
+    @if(edituser) {
+        <div class="edit-modal-backdrop">
+            <div class="edit-modal">
+                <orsys-edit-one-user [user]="edituser" />
+            </div>
+        </div>
+    }
+</div>

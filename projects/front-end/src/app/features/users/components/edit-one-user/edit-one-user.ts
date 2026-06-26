@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, OnChanges, SimpleChanges } from '@angular/core';
 import { User } from '../../models/user';
 
 @Component({
@@ -7,10 +7,14 @@ import { User } from '../../models/user';
   templateUrl: './edit-one-user.html',
   styleUrl: './edit-one-user.css',
 })
-export class EditOneUser {
+export class EditOneUser implements OnChanges {
   user = input.required<User>(); // Lecture seule
 
   save(): void {
-    
+
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.info('Changements détectés', changes);
   }
 }

@@ -1,17 +1,23 @@
 @let item = user();
 
-<h2>{{ title() }}</h2>
-
-<div>
+<div class="user-card-container">
     <div class="card">
         <div class="card-header">
-        {{ item.firstName }} {{ item.lastName }}
+            <div class="user-name">{{ item.firstName }} {{ item.lastName }}</div>
+            <div class="user-subtitle">{{ title() }}</div>
         </div>
         <div class="card-body">
-        <p class="card-text">Id : {{ item.id }}</p>
+            <div class="user-info">
+                <div class="info-item">
+                    <span class="info-label">Identifiant :</span>
+                    <span class="info-value">#{{ item.id }}</span>
+                </div>
+            </div>
         </div>
         <div class="card-footer">
-            <button type="button" (click)="clickToEdit()">Modifier</button>
+            <button type="button" class="btn btn-secondary" (click)="clickToEdit()">
+                <span>✏️</span> Modifier
+            </button>
         </div>
     </div>
 </div>
