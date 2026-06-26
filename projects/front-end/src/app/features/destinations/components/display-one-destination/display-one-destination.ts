@@ -5,6 +5,7 @@ import { StepToStringPipe } from '../../uis/pipes/step-to-string-pipe';
 import { UpperCasePipe } from '@angular/common';
 import { DisplayFriends } from '../display-friends/display-friends';
 import { DisplayCulinaryStopList } from '../display-culinary-stop-list/display-culinary-stop-list';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'orsys-display-one-destination',
@@ -14,6 +15,7 @@ import { DisplayCulinaryStopList } from '../display-culinary-stop-list/display-c
   //providers: [GetOneDestination]
 })
 export class DisplayOneDestination implements OnInit {
+  private readonly router = inject(Router);
   private readonly service = inject(GetOneDestination);
   //private readonly service2 = inject(GetOneDestination);
   protected destination: Destination | undefined = undefined;
@@ -23,5 +25,8 @@ export class DisplayOneDestination implements OnInit {
     this.destination = this.service.getOne();
   }
 
+  goToPlaceList(): void {
+    this.router.navigate(['/places']);
+  }
 
 }
