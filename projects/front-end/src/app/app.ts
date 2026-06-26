@@ -4,10 +4,11 @@ import { DisplayOneDestination } from './features/destinations/components/displa
 import { DisplayCurrentWeather } from './features/weather/components/display-current-weather/display-current-weather';
 import { ObsDiscover } from './features/learnings/obs-discover/obs-discover';
 import { ListFriends } from './features/friends/components/list-friends/list-friends';
+import { CreateOneUser } from './features/users/components/create-one-user/create-one-user';
 
 @Component({
   selector: 'app-root',
-  imports: [ ListFriends, DisplayPlaceList, DisplayOneDestination, DisplayCurrentWeather, ObsDiscover],
+  imports: [ ListFriends, DisplayPlaceList, DisplayOneDestination, DisplayCurrentWeather, ObsDiscover, CreateOneUser],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
