@@ -1,0 +1,11 @@
+@let list = users();
+
+@for (item of list; track item.id) {
+    <orsys-display-one-user [user]="item" title="Résumé utilisateur" (editOne)="editOne($event)" />
+}
+
+
+@let edituser = toEditUser();
+@if(edituser) {
+    <orsys-edit-one-user [user]="edituser" />
+}

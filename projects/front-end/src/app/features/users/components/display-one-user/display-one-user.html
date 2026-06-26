@@ -1,0 +1,17 @@
+@let item = user();
+
+<h2>{{ title() }}</h2>
+
+<div>
+    <div class="card">
+        <div class="card-header">
+        {{ item.firstName }} {{ item.lastName }}
+        </div>
+        <div class="card-body">
+        <p class="card-text">Id : {{ item.id }}</p>
+        </div>
+        <div class="card-footer">
+            <button type="button" (click)="clickToEdit()">Modifier</button>
+        </div>
+    </div>
+</div>
